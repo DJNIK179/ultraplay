@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Palui SP Demo';
+    src: url('/assets/fonts/PaluiSPDemoBold.woff2') format('woff2'),
+        url('/assets/fonts/PaluiSPDemoBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost-Medium';
+    src: url('/assets/fonts/Jost-Medium.woff2') format('woff2'),
+        url('/assets/fonts/Jost-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost-Light';
+    src: url('/assets/fonts/Jost-Light.woff2') format('woff2'),
+        url('/assets/fonts/Jost-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost-ExtraLight';
+    src: url('/assets/fonts/Jost-ExtraLight.woff2') format('woff2'),
+        url('/assets/fonts/Jost-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost-SemiBold';
+    src: url('/assets/fonts/Jost-SemiBold.woff2') format('woff2'),
+        url('/assets/fonts/Jost-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jost-Regular';
+    src: url('/assets/fonts/Jost-Regular.woff2') format('woff2'),
+        url('/assets/fonts/Jost-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
