@@ -106,7 +106,6 @@ body {
   visibility: visible;
 }
 
-/* Стили для меню */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -176,6 +175,13 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 43px 0;
+}
+
+.header__logo:hover {
+  background: linear-gradient(83deg, #9d00ff 0%, rgba(0, 55, 145, 0.9) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header__icons {
@@ -306,7 +312,7 @@ body {
 .category__img {
   position: absolute;
   bottom: 0;
-  left: 50%;
+  left: 53.5%;
   transform: translateX(-50%);
   z-index: 2;
 }
@@ -317,6 +323,37 @@ body {
   margin-top: 20px;
 }
 
+.category__item:hover .category__item-title {
+  background: linear-gradient(75deg, #9d00ff 0%, rgba(0, 55, 145, 0.9) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.category__item-title--hover {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  z-index: 2;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--general-text);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.category__item-title--hover::after {
+  content: "";
+  background: url(/assets/image/icons/category-arrow.svg);
+  width: 22px;
+  height: 11px;
+  display: inline-flex;
+  margin-left: 10px;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
 .category__item {
   position: relative;
 }
@@ -324,16 +361,25 @@ body {
 .category__img--hover {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   opacity: 0;
-  z-index: 5;
+  z-index: 2;
+  transition: all 0.5s;
 }
 
 .category__item:hover .category__img--hover {
   opacity: 1;
-  z-index: 5;
+  z-index: 2;
 }
 
+.category__item:hover .category__item-title--hover {
+  opacity: 1;
+}
+
+.category__item:hover .category__item-title--hover::after {
+  opacity: 1;
+}
 
 /* ====================  SALES  =========================== */
 
@@ -706,6 +752,13 @@ body {
   justify-content: space-between;
 }
 
+.footer__top-left-logo:hover {
+  background: linear-gradient(83deg, #9d00ff 0%, rgba(0, 55, 145, 0.9) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .footer__top-left-phone {
   margin-top: 30px;
 }
@@ -737,6 +790,13 @@ body {
   color: #f6f6f6;
 }
 
+.footer__top-right-link:hover {
+  background: linear-gradient(83deg, #9d00ff 0%, rgba(0, 55, 145, 0.9) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .footer__top-right-item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -746,10 +806,16 @@ body {
   border-radius: 30px 30px 0 0;
 }
 
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer__nav-list {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 160px;
   padding: 40px 0;
 }
 
@@ -760,8 +826,21 @@ body {
   color: var(--general-text);
 }
 
-.footer__nav-item:last-child {
+.footer__nav-item-btn {
   display: flex;
   align-items: center;
   gap: 15px;
+  transition: all 5s;
+}
+
+.footer__nav-item-btn svg {
+  transform-origin: center;
+}
+
+.footer__nav-item-btn:hover {
+  font-family: "Jost-Medium";
+}
+
+.footer__nav-item-btn:hover svg {
+  transform: scale(1.4);
 }
