@@ -308,6 +308,7 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
 }
 
 .category__item-title {
@@ -315,6 +316,24 @@ body {
   font-size: 36px;
   margin-top: 20px;
 }
+
+.category__item {
+  position: relative;
+}
+
+.category__img--hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 5;
+}
+
+.category__item:hover .category__img--hover {
+  opacity: 1;
+  z-index: 5;
+}
+
 
 /* ====================  SALES  =========================== */
 
