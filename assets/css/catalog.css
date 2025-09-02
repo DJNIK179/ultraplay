@@ -1,8 +1,18 @@
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .catalog {
   display: flex;
-  max-width: 1200px;
+  max-width: 1558px;
   margin: 0 auto;
-  padding: 50px 20px 150px;
+  padding: 50px 15px 150px;
   gap: 30px;
 }
 
@@ -27,18 +37,23 @@
   color: var(--general-text);
 }
 
+.accordion-active .accordion-header {
+  border-radius: 20px 20px 0 0;
+}
+
 .accordion-header {
-  padding: 15px;
+  padding: 24px 40px;
   background: var(--accent-bg);
+  border-radius: 20px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
   transition: background-color 0.3s ease;
   font-weight: 400;
   font-size: 32px;
   color: rgba(246, 246, 246, 0.9);
+  transition: border-radius 0.5s;
 }
 
 .accordion-header:hover {
@@ -46,13 +61,14 @@
 }
 
 .accordion-content {
-  display: none;
-  padding: 15px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
   background: var(--accent-bg);
-}
-
-.accordion.active .accordion-content {
-  display: block;
+  font-family: "Jost-Light", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: rgba(246, 246, 246, 0.9);
 }
 
 .accordion-icon {
@@ -63,9 +79,21 @@
 /* Чекбоксы */
 .checkbox-label {
   display: block;
-  padding: 8px 0;
   cursor: pointer;
   transition: color 0.3s ease;
+  padding: 0 50px;
+}
+
+.checkbox-label {
+  margin-bottom: 20px;
+}
+
+.checkbox-label:first-child {
+  margin-top: 30px;
+}
+
+.checkbox-label:last-child {
+  margin-bottom: 30px;
 }
 
 .checkbox-label:hover {
@@ -74,35 +102,43 @@
 
 .checkbox-label input {
   margin-right: 10px;
+  display: none;
 }
 
 /* Фильтр по цене */
 .price-filter {
   margin: 20px 0;
   padding: 15px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 20px;
+  padding: 20px 40px 30px 40px;
+  background: var(--accent-bg);
 }
 
 .price-filter h3 {
   margin-bottom: 10px;
-  font-size: 16px;
-  color: #2c3e50;
+  font-weight: 400;
+  font-size: 32px;
+  color: rgba(246, 246, 246, 0.9);
+  margin-bottom: 20px;
 }
 
 .price-inputs {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .price-input {
   flex: 1;
-  padding: 8px 12px;
-  border: 2px solid #e0e0e0;
-  border-radius: 6px;
   font-size: 14px;
+  border-radius: 15px;
+  padding: 16px 17px;
+  width: 265px;
+  height: 62px;
+  background: rgba(246, 246, 246, 0.05);
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(246, 246, 246, 0.2);
 }
 
 .price-input:focus {
@@ -111,14 +147,22 @@
 }
 
 .price-apply-btn {
+  margin-bottom: 10px;
+}
+
+.price-apply-btn,
+.reset-filters-btn {
   width: 100%;
-  padding: 10px;
+  padding: 15px 10px;
   background: linear-gradient(75deg, #9d00ff 0%, rgba(0, 55, 145, 0.9) 100%);
-  color: white;
+  color: var(--general-text);
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  font-family: "Jost-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 .price-apply-btn:hover {
