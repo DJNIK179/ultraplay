@@ -8,6 +8,22 @@ input[type="number"]::-webkit-inner-spin-button {
   margin: 0;
 }
 
+.breadcrumbs {
+  padding: 50px 0;
+
+  font-family: "Jost-ExtraLight", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  color: var(--general-text);
+}
+
+.catalog__title {
+  font-family: "Palui SP Demo", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  color: var(--general-text);
+}
+
 .catalog {
   display: flex;
   max-width: 1558px;
@@ -21,6 +37,8 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-shrink: 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   height: fit-content;
+  background: var(--accent-bg);
+  border-radius: 20px;
 }
 
 .sidebar h2 {
@@ -51,7 +69,7 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   transition: background-color 0.3s ease;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 24px;
   color: rgba(246, 246, 246, 0.9);
   transition: border-radius 0.5s;
 }
@@ -117,7 +135,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .price-filter h3 {
   margin-bottom: 10px;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 24px;
   color: rgba(246, 246, 246, 0.9);
   margin-bottom: 20px;
 }
@@ -150,19 +168,18 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: 10px;
 }
 
-.price-apply-btn,
-.reset-filters-btn {
+.price-apply-btn {
   width: 100%;
   padding: 15px 10px;
   background: linear-gradient(75deg, #9d00ff 0%, rgba(0, 55, 145, 0.9) 100%);
   color: var(--general-text);
   border: none;
-  border-radius: 6px;
+  border-radius: 15px;
   cursor: pointer;
   transition: opacity 0.3s ease;
   font-family: "Jost-Medium", sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .price-apply-btn:hover {
@@ -185,20 +202,22 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   gap: 15px;
   align-items: center;
+  position: relative;
 }
 
 .search-input {
   flex: 1;
-  padding: 29px 40px;
+  padding: 29px 84px;
   border-radius: 25px;
   font-size: 20px;
   outline: none;
-  background: var(--accent-bg);
+  background: rgba(246, 246, 246, 0.1);
   color: var(--general-text);
 }
 
-.search-input:focus {
-  border-color: #9d00ff;
+.search-icon {
+  position: absolute;
+  left: 40px;
 }
 
 .search-btn {
@@ -243,14 +262,17 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .filter-tag {
-  background: linear-gradient(75deg, #9d00ff 0%, rgba(0, 55, 145, 0.9) 100%);
-  color: white;
-  padding: 8px 15px;
-  border-radius: 20px;
-  font-size: 14px;
+  background: var(--accent-bg);
+  font-family: "Jost-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(246, 246, 246, 0.9);
+  border-radius: 15px;
+  padding: 15px 20px;
+  height: 59px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 35px;
 }
 
 .remove-filter {
@@ -267,13 +289,18 @@ input[type="number"]::-webkit-inner-spin-button {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-text {
+  font-family: "Jost-Medium", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(246, 246, 246, 0.9);
 }
 
 .sort-select {
-  padding: 10px 15px;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  background: white;
   cursor: pointer;
   min-width: 200px;
 }
@@ -281,6 +308,73 @@ input[type="number"]::-webkit-inner-spin-button {
 .sort-select:focus {
   border-color: #9d00ff;
   outline: none;
+}
+
+.custom-select {
+  position: relative;
+  font-family: "Jost-Regular", sans-serif;
+  font-size: 20px;
+  background: transparent;
+  color: rgba(246, 246, 246, 0.9);
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  border-radius: 0;
+  outline: none;
+}
+
+/* Кастомная стрелка */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 1L6 6L1 1' stroke='%23F7F7F7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* Стили для раскрытого состояния */
+.custom-select:focus {
+  border: none;
+  outline: none;
+}
+
+/* Стили для option */
+.custom-select option {
+  background: var(--general-bg);
+  color: rgba(246, 246, 246, 0.9);
+  font-family: "Jost-Regular", sans-serif;
+  font-size: 18px;
+  border: none;
+}
+
+/* Для браузеров на WebKit (Chrome, Safari) */
+.custom-select::-webkit-listbox {
+  background: #282828;
+  border: none;
+}
+
+.custom-select::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-select::-webkit-scrollbar-track {
+  background: #282828;
+}
+
+.custom-select::-webkit-scrollbar-thumb {
+  background: rgba(246, 246, 246, 0.5);
+  border-radius: 4px;
 }
 
 /* Товары */
