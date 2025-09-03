@@ -194,8 +194,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Поисковая строка */
 .search-section {
   border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
 }
 
 .search-container {
@@ -240,12 +239,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .categories__wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .selected-categories-container {
   border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -283,10 +281,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Сортировка */
 .sorting-container {
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-right: 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -379,9 +374,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Товары */
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 49px;
 }
 
 .product-card {
@@ -444,25 +439,50 @@ input[type="number"]::-webkit-inner-spin-button {
   opacity: 0.9;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-  .catalog {
-    flex-direction: column;
-  }
+.product__bottom {
+  padding: 80px 0 0 0;
+}
 
-  .sidebar {
-    width: 100%;
-  }
+.product__bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .search-container {
-    flex-direction: column;
-  }
+.product__inner-count {
+  font-family: "Jost-Light", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--general-text);
+}
 
-  .sorting-container {
-    justify-content: center;
-  }
+.product__inner-pagination {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
 
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
+.product__inner-pagination-list {
+  display: flex;
+  gap: 30px;
+}
+
+.product__inner-pagination-item {
+  width: 81px;
+  height: 81px;
+  border-radius: 20px;
+  border: 2px solid rgba(246, 246, 246, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Jost-Medium";
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--general-text);
+}
+
+.product__inner-pagination-item.active {
+  border: 3px solid #003791
 }

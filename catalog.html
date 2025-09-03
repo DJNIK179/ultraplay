@@ -52,8 +52,8 @@
             <nav class="menu" id="menu">
               <div class="menu-close" id="menuClose"></div>
               <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">О нас</a></li>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/catalog.html">Каталог</a></li>
                 <li><a href="#">Услуги</a></li>
                 <li><a href="#">Портфолио</a></li>
                 <li><a href="#">Контакты</a></li>
@@ -133,7 +133,7 @@
 
     <nav class="breadcrumbs">
       <div class="container">
-        <a href="#">Главная</a>
+        <a href="/">Главная</a>
         <span class="separator">/</span>
         <span>Каталог</span>
       </div>
@@ -349,93 +349,325 @@
         <!-- Сетка товаров -->
         <div class="products-grid">
           <!-- Товар 1 -->
-          <div
-            class="product-card"
-            data-category="action pc"
-            data-price="25990"
-            data-rating="5"
-            data-year="2024"
-          >
-            <div class="product-image">Изображение товара</div>
-            <h3 class="product-title">Cyberpunk 2077</h3>
-            <div class="product-price">25 990 ₽</div>
-            <div class="product-rating">★★★★★</div>
-            <button class="add-to-cart">В корзину</button>
+          <div class="sales__item">
+            <div class="sales__image">
+              <img
+                src="/assets/image/sales-game-2.png"
+                alt=""
+                class="sales__img"
+              />
+              <a href="#" class="sales__fav">
+                <svg
+                  width="24"
+                  height="22"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.351 3.85221C18.261 1.58123 15.2808 1.6522 13.2346 3.49311C12.8922 3.7987 12.4552 3.96681 12.0031 3.96681C11.5509 3.96681 11.1139 3.7987 10.7715 3.49311C8.72667 1.65078 5.74377 1.58265 3.65643 3.85221C2.43996 5.46035 2.01618 6.94358 2.06007 8.30475C2.10532 9.69857 2.6443 11.0839 3.54946 12.4521C5.38034 15.2241 8.51958 17.6612 11.1706 19.5958C11.4139 19.7742 11.7048 19.87 12.0031 19.87C12.3013 19.87 12.5922 19.7742 12.8355 19.5958C15.4673 17.6711 18.6066 15.2327 20.4429 12.4592C21.3495 11.0881 21.8926 9.69999 21.9392 8.30617C21.9872 6.94358 21.5661 5.45893 20.351 3.85221ZM12.0031 1.78278C14.8351 -0.664197 19.0221 -0.723811 21.8802 2.42717L21.9104 2.46124L21.9378 2.49672C23.4327 4.45544 24.0635 6.43545 23.995 8.3814C23.9291 10.3046 23.1858 12.0803 22.1394 13.6614C20.0672 16.7954 16.6262 19.4311 14.0232 21.3345C12.8095 22.2216 11.198 22.2216 9.98428 21.3359C7.36345 19.4226 3.91975 16.7854 1.85161 13.6543C0.806564 12.0732 0.0673542 10.299 0.00426865 8.37714C-0.0588188 6.43261 0.574791 4.45544 2.06967 2.49672L2.09709 2.46124L2.12727 2.42717C4.98399 -0.723811 9.17376 -0.664197 12.0031 1.78278Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="sales__category">
+              Топ продаж <span class="point">·</span> Экшен
+            </p>
+            <p class="sales__item-title">Black Myth: Wukong</p>
+            <div class="sales__item-price">3599 ₽</div>
+            <button type="button" class="sales__btn">Добавить в корзину</button>
           </div>
 
           <!-- Товар 2 -->
-          <div
-            class="product-card"
-            data-category="action playstation"
-            data-price="19990"
-            data-rating="4"
-            data-year="2023"
-          >
-            <div class="product-image">Изображение товара</div>
-            <h3 class="product-title">Spider-Man 2</h3>
-            <div class="product-price">19 990 ₽</div>
-            <div class="product-rating">★★★★☆</div>
-            <button class="add-to-cart">В корзину</button>
+          <div class="sales__item">
+            <div class="sales__image">
+              <img
+                src="/assets/image/sales-game-2.png"
+                alt=""
+                class="sales__img"
+              />
+              <a href="#" class="sales__fav">
+                <svg
+                  width="24"
+                  height="22"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.351 3.85221C18.261 1.58123 15.2808 1.6522 13.2346 3.49311C12.8922 3.7987 12.4552 3.96681 12.0031 3.96681C11.5509 3.96681 11.1139 3.7987 10.7715 3.49311C8.72667 1.65078 5.74377 1.58265 3.65643 3.85221C2.43996 5.46035 2.01618 6.94358 2.06007 8.30475C2.10532 9.69857 2.6443 11.0839 3.54946 12.4521C5.38034 15.2241 8.51958 17.6612 11.1706 19.5958C11.4139 19.7742 11.7048 19.87 12.0031 19.87C12.3013 19.87 12.5922 19.7742 12.8355 19.5958C15.4673 17.6711 18.6066 15.2327 20.4429 12.4592C21.3495 11.0881 21.8926 9.69999 21.9392 8.30617C21.9872 6.94358 21.5661 5.45893 20.351 3.85221ZM12.0031 1.78278C14.8351 -0.664197 19.0221 -0.723811 21.8802 2.42717L21.9104 2.46124L21.9378 2.49672C23.4327 4.45544 24.0635 6.43545 23.995 8.3814C23.9291 10.3046 23.1858 12.0803 22.1394 13.6614C20.0672 16.7954 16.6262 19.4311 14.0232 21.3345C12.8095 22.2216 11.198 22.2216 9.98428 21.3359C7.36345 19.4226 3.91975 16.7854 1.85161 13.6543C0.806564 12.0732 0.0673542 10.299 0.00426865 8.37714C-0.0588188 6.43261 0.574791 4.45544 2.06967 2.49672L2.09709 2.46124L2.12727 2.42717C4.98399 -0.723811 9.17376 -0.664197 12.0031 1.78278Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="sales__category">
+              Топ продаж <span class="point">·</span> Экшен
+            </p>
+            <p class="sales__item-title">Black Myth: Wukong</p>
+            <div class="sales__item-price">3599 ₽</div>
+            <button type="button" class="sales__btn">Добавить в корзину</button>
           </div>
 
-          <!-- Товар 3 -->
-          <div
-            class="product-card"
-            data-category="sports xbox"
-            data-price="1490"
-            data-rating="5"
-            data-year="2024"
-          >
-            <div class="product-image">Изображение товара</div>
-            <h3 class="product-title">FIFA 24</h3>
-            <div class="product-price">1 490 ₽</div>
-            <div class="product-rating">★★★★★</div>
-            <button class="add-to-cart">В корзину</button>
+          <!-- Товар 2 -->
+          <div class="sales__item">
+            <div class="sales__image">
+              <img
+                src="/assets/image/sales-game-2.png"
+                alt=""
+                class="sales__img"
+              />
+              <a href="#" class="sales__fav">
+                <svg
+                  width="24"
+                  height="22"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.351 3.85221C18.261 1.58123 15.2808 1.6522 13.2346 3.49311C12.8922 3.7987 12.4552 3.96681 12.0031 3.96681C11.5509 3.96681 11.1139 3.7987 10.7715 3.49311C8.72667 1.65078 5.74377 1.58265 3.65643 3.85221C2.43996 5.46035 2.01618 6.94358 2.06007 8.30475C2.10532 9.69857 2.6443 11.0839 3.54946 12.4521C5.38034 15.2241 8.51958 17.6612 11.1706 19.5958C11.4139 19.7742 11.7048 19.87 12.0031 19.87C12.3013 19.87 12.5922 19.7742 12.8355 19.5958C15.4673 17.6711 18.6066 15.2327 20.4429 12.4592C21.3495 11.0881 21.8926 9.69999 21.9392 8.30617C21.9872 6.94358 21.5661 5.45893 20.351 3.85221ZM12.0031 1.78278C14.8351 -0.664197 19.0221 -0.723811 21.8802 2.42717L21.9104 2.46124L21.9378 2.49672C23.4327 4.45544 24.0635 6.43545 23.995 8.3814C23.9291 10.3046 23.1858 12.0803 22.1394 13.6614C20.0672 16.7954 16.6262 19.4311 14.0232 21.3345C12.8095 22.2216 11.198 22.2216 9.98428 21.3359C7.36345 19.4226 3.91975 16.7854 1.85161 13.6543C0.806564 12.0732 0.0673542 10.299 0.00426865 8.37714C-0.0588188 6.43261 0.574791 4.45544 2.06967 2.49672L2.09709 2.46124L2.12727 2.42717C4.98399 -0.723811 9.17376 -0.664197 12.0031 1.78278Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="sales__category">
+              Топ продаж <span class="point">·</span> Экшен
+            </p>
+            <p class="sales__item-title">Black Myth: Wukong</p>
+            <div class="sales__item-price">3599 ₽</div>
+            <button type="button" class="sales__btn">Добавить в корзину</button>
           </div>
 
-          <!-- Товар 4 -->
-          <div
-            class="product-card"
-            data-category="rpg nintendo"
-            data-price="3990"
-            data-rating="4"
-            data-year="2023"
-          >
-            <div class="product-image">Изображение товара</div>
-            <h3 class="product-title">The Legend of Zelda</h3>
-            <div class="product-price">3 990 ₽</div>
-            <div class="product-rating">★★★★☆</div>
-            <button class="add-to-cart">В корзину</button>
+          <!-- Товар 2 -->
+          <div class="sales__item">
+            <div class="sales__image">
+              <img
+                src="/assets/image/sales-game-2.png"
+                alt=""
+                class="sales__img"
+              />
+              <a href="#" class="sales__fav">
+                <svg
+                  width="24"
+                  height="22"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.351 3.85221C18.261 1.58123 15.2808 1.6522 13.2346 3.49311C12.8922 3.7987 12.4552 3.96681 12.0031 3.96681C11.5509 3.96681 11.1139 3.7987 10.7715 3.49311C8.72667 1.65078 5.74377 1.58265 3.65643 3.85221C2.43996 5.46035 2.01618 6.94358 2.06007 8.30475C2.10532 9.69857 2.6443 11.0839 3.54946 12.4521C5.38034 15.2241 8.51958 17.6612 11.1706 19.5958C11.4139 19.7742 11.7048 19.87 12.0031 19.87C12.3013 19.87 12.5922 19.7742 12.8355 19.5958C15.4673 17.6711 18.6066 15.2327 20.4429 12.4592C21.3495 11.0881 21.8926 9.69999 21.9392 8.30617C21.9872 6.94358 21.5661 5.45893 20.351 3.85221ZM12.0031 1.78278C14.8351 -0.664197 19.0221 -0.723811 21.8802 2.42717L21.9104 2.46124L21.9378 2.49672C23.4327 4.45544 24.0635 6.43545 23.995 8.3814C23.9291 10.3046 23.1858 12.0803 22.1394 13.6614C20.0672 16.7954 16.6262 19.4311 14.0232 21.3345C12.8095 22.2216 11.198 22.2216 9.98428 21.3359C7.36345 19.4226 3.91975 16.7854 1.85161 13.6543C0.806564 12.0732 0.0673542 10.299 0.00426865 8.37714C-0.0588188 6.43261 0.574791 4.45544 2.06967 2.49672L2.09709 2.46124L2.12727 2.42717C4.98399 -0.723811 9.17376 -0.664197 12.0031 1.78278Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="sales__category">
+              Топ продаж <span class="point">·</span> Экшен
+            </p>
+            <p class="sales__item-title">Black Myth: Wukong</p>
+            <div class="sales__item-price">3599 ₽</div>
+            <button type="button" class="sales__btn">Добавить в корзину</button>
           </div>
 
-          <!-- Товар 5 -->
-          <div
-            class="product-card"
-            data-category="strategy pc"
-            data-price="34990"
-            data-rating="5"
-            data-year="2024"
-          >
-            <div class="product-image">Изображение товара</div>
-            <h3 class="product-title">StarCraft III</h3>
-            <div class="product-price">34 990 ₽</div>
-            <div class="product-rating">★★★★★</div>
-            <button class="add-to-cart">В корзину</button>
+          <!-- Товар 2 -->
+          <div class="sales__item">
+            <div class="sales__image">
+              <img
+                src="/assets/image/sales-game-2.png"
+                alt=""
+                class="sales__img"
+              />
+              <a href="#" class="sales__fav">
+                <svg
+                  width="24"
+                  height="22"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.351 3.85221C18.261 1.58123 15.2808 1.6522 13.2346 3.49311C12.8922 3.7987 12.4552 3.96681 12.0031 3.96681C11.5509 3.96681 11.1139 3.7987 10.7715 3.49311C8.72667 1.65078 5.74377 1.58265 3.65643 3.85221C2.43996 5.46035 2.01618 6.94358 2.06007 8.30475C2.10532 9.69857 2.6443 11.0839 3.54946 12.4521C5.38034 15.2241 8.51958 17.6612 11.1706 19.5958C11.4139 19.7742 11.7048 19.87 12.0031 19.87C12.3013 19.87 12.5922 19.7742 12.8355 19.5958C15.4673 17.6711 18.6066 15.2327 20.4429 12.4592C21.3495 11.0881 21.8926 9.69999 21.9392 8.30617C21.9872 6.94358 21.5661 5.45893 20.351 3.85221ZM12.0031 1.78278C14.8351 -0.664197 19.0221 -0.723811 21.8802 2.42717L21.9104 2.46124L21.9378 2.49672C23.4327 4.45544 24.0635 6.43545 23.995 8.3814C23.9291 10.3046 23.1858 12.0803 22.1394 13.6614C20.0672 16.7954 16.6262 19.4311 14.0232 21.3345C12.8095 22.2216 11.198 22.2216 9.98428 21.3359C7.36345 19.4226 3.91975 16.7854 1.85161 13.6543C0.806564 12.0732 0.0673542 10.299 0.00426865 8.37714C-0.0588188 6.43261 0.574791 4.45544 2.06967 2.49672L2.09709 2.46124L2.12727 2.42717C4.98399 -0.723811 9.17376 -0.664197 12.0031 1.78278Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="sales__category">
+              Топ продаж <span class="point">·</span> Экшен
+            </p>
+            <p class="sales__item-title">Black Myth: Wukong</p>
+            <div class="sales__item-price">3599 ₽</div>
+            <button type="button" class="sales__btn">Добавить в корзину</button>
           </div>
 
-          <!-- Товар 6 -->
-          <div
-            class="product-card"
-            data-category="adventure mobile"
-            data-price="45990"
-            data-rating="3"
-            data-year="2022"
-          >
-            <div class="product-image">Изображение товара</div>
-            <h3 class="product-title">Genshin Impact</h3>
-            <div class="product-price">45 990 ₽</div>
-            <div class="product-rating">★★★☆☆</div>
-            <button class="add-to-cart">В корзину</button>
+          <!-- Товар 2 -->
+          <div class="sales__item">
+            <div class="sales__image">
+              <img
+                src="/assets/image/sales-game-2.png"
+                alt=""
+                class="sales__img"
+              />
+              <a href="#" class="sales__fav">
+                <svg
+                  width="24"
+                  height="22"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.351 3.85221C18.261 1.58123 15.2808 1.6522 13.2346 3.49311C12.8922 3.7987 12.4552 3.96681 12.0031 3.96681C11.5509 3.96681 11.1139 3.7987 10.7715 3.49311C8.72667 1.65078 5.74377 1.58265 3.65643 3.85221C2.43996 5.46035 2.01618 6.94358 2.06007 8.30475C2.10532 9.69857 2.6443 11.0839 3.54946 12.4521C5.38034 15.2241 8.51958 17.6612 11.1706 19.5958C11.4139 19.7742 11.7048 19.87 12.0031 19.87C12.3013 19.87 12.5922 19.7742 12.8355 19.5958C15.4673 17.6711 18.6066 15.2327 20.4429 12.4592C21.3495 11.0881 21.8926 9.69999 21.9392 8.30617C21.9872 6.94358 21.5661 5.45893 20.351 3.85221ZM12.0031 1.78278C14.8351 -0.664197 19.0221 -0.723811 21.8802 2.42717L21.9104 2.46124L21.9378 2.49672C23.4327 4.45544 24.0635 6.43545 23.995 8.3814C23.9291 10.3046 23.1858 12.0803 22.1394 13.6614C20.0672 16.7954 16.6262 19.4311 14.0232 21.3345C12.8095 22.2216 11.198 22.2216 9.98428 21.3359C7.36345 19.4226 3.91975 16.7854 1.85161 13.6543C0.806564 12.0732 0.0673542 10.299 0.00426865 8.37714C-0.0588188 6.43261 0.574791 4.45544 2.06967 2.49672L2.09709 2.46124L2.12727 2.42717C4.98399 -0.723811 9.17376 -0.664197 12.0031 1.78278Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="sales__category">
+              Топ продаж <span class="point">·</span> Экшен
+            </p>
+            <p class="sales__item-title">Black Myth: Wukong</p>
+            <div class="sales__item-price">3599 ₽</div>
+            <button type="button" class="sales__btn">Добавить в корзину</button>
+          </div>
+
+          <!-- Товар 2 -->
+          <div class="sales__item">
+            <div class="sales__image">
+              <img
+                src="/assets/image/sales-game-2.png"
+                alt=""
+                class="sales__img"
+              />
+              <a href="#" class="sales__fav">
+                <svg
+                  width="24"
+                  height="22"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.351 3.85221C18.261 1.58123 15.2808 1.6522 13.2346 3.49311C12.8922 3.7987 12.4552 3.96681 12.0031 3.96681C11.5509 3.96681 11.1139 3.7987 10.7715 3.49311C8.72667 1.65078 5.74377 1.58265 3.65643 3.85221C2.43996 5.46035 2.01618 6.94358 2.06007 8.30475C2.10532 9.69857 2.6443 11.0839 3.54946 12.4521C5.38034 15.2241 8.51958 17.6612 11.1706 19.5958C11.4139 19.7742 11.7048 19.87 12.0031 19.87C12.3013 19.87 12.5922 19.7742 12.8355 19.5958C15.4673 17.6711 18.6066 15.2327 20.4429 12.4592C21.3495 11.0881 21.8926 9.69999 21.9392 8.30617C21.9872 6.94358 21.5661 5.45893 20.351 3.85221ZM12.0031 1.78278C14.8351 -0.664197 19.0221 -0.723811 21.8802 2.42717L21.9104 2.46124L21.9378 2.49672C23.4327 4.45544 24.0635 6.43545 23.995 8.3814C23.9291 10.3046 23.1858 12.0803 22.1394 13.6614C20.0672 16.7954 16.6262 19.4311 14.0232 21.3345C12.8095 22.2216 11.198 22.2216 9.98428 21.3359C7.36345 19.4226 3.91975 16.7854 1.85161 13.6543C0.806564 12.0732 0.0673542 10.299 0.00426865 8.37714C-0.0588188 6.43261 0.574791 4.45544 2.06967 2.49672L2.09709 2.46124L2.12727 2.42717C4.98399 -0.723811 9.17376 -0.664197 12.0031 1.78278Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="sales__category">
+              Топ продаж <span class="point">·</span> Экшен
+            </p>
+            <p class="sales__item-title">Black Myth: Wukong</p>
+            <div class="sales__item-price">3599 ₽</div>
+            <button type="button" class="sales__btn">Добавить в корзину</button>
+          </div>
+
+          <!-- Товар 2 -->
+          <div class="sales__item">
+            <div class="sales__image">
+              <img
+                src="/assets/image/sales-game-2.png"
+                alt=""
+                class="sales__img"
+              />
+              <a href="#" class="sales__fav">
+                <svg
+                  width="24"
+                  height="22"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.351 3.85221C18.261 1.58123 15.2808 1.6522 13.2346 3.49311C12.8922 3.7987 12.4552 3.96681 12.0031 3.96681C11.5509 3.96681 11.1139 3.7987 10.7715 3.49311C8.72667 1.65078 5.74377 1.58265 3.65643 3.85221C2.43996 5.46035 2.01618 6.94358 2.06007 8.30475C2.10532 9.69857 2.6443 11.0839 3.54946 12.4521C5.38034 15.2241 8.51958 17.6612 11.1706 19.5958C11.4139 19.7742 11.7048 19.87 12.0031 19.87C12.3013 19.87 12.5922 19.7742 12.8355 19.5958C15.4673 17.6711 18.6066 15.2327 20.4429 12.4592C21.3495 11.0881 21.8926 9.69999 21.9392 8.30617C21.9872 6.94358 21.5661 5.45893 20.351 3.85221ZM12.0031 1.78278C14.8351 -0.664197 19.0221 -0.723811 21.8802 2.42717L21.9104 2.46124L21.9378 2.49672C23.4327 4.45544 24.0635 6.43545 23.995 8.3814C23.9291 10.3046 23.1858 12.0803 22.1394 13.6614C20.0672 16.7954 16.6262 19.4311 14.0232 21.3345C12.8095 22.2216 11.198 22.2216 9.98428 21.3359C7.36345 19.4226 3.91975 16.7854 1.85161 13.6543C0.806564 12.0732 0.0673542 10.299 0.00426865 8.37714C-0.0588188 6.43261 0.574791 4.45544 2.06967 2.49672L2.09709 2.46124L2.12727 2.42717C4.98399 -0.723811 9.17376 -0.664197 12.0031 1.78278Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="sales__category">
+              Топ продаж <span class="point">·</span> Экшен
+            </p>
+            <p class="sales__item-title">Black Myth: Wukong</p>
+            <div class="sales__item-price">3599 ₽</div>
+            <button type="button" class="sales__btn">Добавить в корзину</button>
+          </div>
+
+          <!-- Товар 2 -->
+          <div class="sales__item">
+            <div class="sales__image">
+              <img
+                src="/assets/image/sales-game-2.png"
+                alt=""
+                class="sales__img"
+              />
+              <a href="#" class="sales__fav">
+                <svg
+                  width="24"
+                  height="22"
+                  viewBox="0 0 24 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.351 3.85221C18.261 1.58123 15.2808 1.6522 13.2346 3.49311C12.8922 3.7987 12.4552 3.96681 12.0031 3.96681C11.5509 3.96681 11.1139 3.7987 10.7715 3.49311C8.72667 1.65078 5.74377 1.58265 3.65643 3.85221C2.43996 5.46035 2.01618 6.94358 2.06007 8.30475C2.10532 9.69857 2.6443 11.0839 3.54946 12.4521C5.38034 15.2241 8.51958 17.6612 11.1706 19.5958C11.4139 19.7742 11.7048 19.87 12.0031 19.87C12.3013 19.87 12.5922 19.7742 12.8355 19.5958C15.4673 17.6711 18.6066 15.2327 20.4429 12.4592C21.3495 11.0881 21.8926 9.69999 21.9392 8.30617C21.9872 6.94358 21.5661 5.45893 20.351 3.85221ZM12.0031 1.78278C14.8351 -0.664197 19.0221 -0.723811 21.8802 2.42717L21.9104 2.46124L21.9378 2.49672C23.4327 4.45544 24.0635 6.43545 23.995 8.3814C23.9291 10.3046 23.1858 12.0803 22.1394 13.6614C20.0672 16.7954 16.6262 19.4311 14.0232 21.3345C12.8095 22.2216 11.198 22.2216 9.98428 21.3359C7.36345 19.4226 3.91975 16.7854 1.85161 13.6543C0.806564 12.0732 0.0673542 10.299 0.00426865 8.37714C-0.0588188 6.43261 0.574791 4.45544 2.06967 2.49672L2.09709 2.46124L2.12727 2.42717C4.98399 -0.723811 9.17376 -0.664197 12.0031 1.78278Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p class="sales__category">
+              Топ продаж <span class="point">·</span> Экшен
+            </p>
+            <p class="sales__item-title">Black Myth: Wukong</p>
+            <div class="sales__item-price">3599 ₽</div>
+            <button type="button" class="sales__btn">Добавить в корзину</button>
+          </div>
+        </div>
+
+        <div class="product__bottom">
+          <div class="product__bottom-inner">
+            <div class="product__inner-count">Найдено 2000 товаров</div>
+            <div class="product__inner-pagination">
+              <div class="product__inner-pagination-prev">
+                <svg
+                  width="13"
+                  height="23"
+                  viewBox="0 0 13 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.43934 12.5607C-0.146447 11.9749 -0.146447 11.0251 0.43934 10.4393L9.98528 0.893398C10.5711 0.307612 11.5208 0.307612 12.1066 0.893398C12.6924 1.47918 12.6924 2.42893 12.1066 3.01472L3.62132 11.5L12.1066 19.9853C12.6924 20.5711 12.6924 21.5208 12.1066 22.1066C11.5208 22.6924 10.5711 22.6924 9.98528 22.1066L0.43934 12.5607ZM2.5 11.5V13H1.5V11.5V10H2.5V11.5Z"
+                    fill="#F7F7F7"
+                    fill-opacity="0.05"
+                  />
+                </svg>
+              </div>
+              <ul class="product__inner-pagination-list">
+                <li class="product__inner-pagination-item active">1</li>
+                <li class="product__inner-pagination-item">2</li>
+                <li class="product__inner-pagination-item">3</li>
+                <li class="product__inner-pagination-item">...</li>
+              </ul>
+              <div class="product__inner-pagination-next">
+                <svg
+                  width="13"
+                  height="23"
+                  viewBox="0 0 13 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.5607 12.5607C13.1464 11.9749 13.1464 11.0251 12.5607 10.4393L3.01472 0.893398C2.42893 0.307612 1.47918 0.307612 0.893398 0.893398C0.307612 1.47918 0.307612 2.42893 0.893398 3.01472L9.37868 11.5L0.893398 19.9853C0.307612 20.5711 0.307612 21.5208 0.893398 22.1066C1.47918 22.6924 2.42893 22.6924 3.01472 22.1066L12.5607 12.5607ZM10.5 11.5V13H11.5V11.5V10H10.5V11.5Z"
+                    fill="#F7F7F7"
+                  />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </main>
@@ -539,259 +771,7 @@
       </div>
     </footer>
 
-    <script>
-      // Аккордеоны
-      document.querySelectorAll(".accordion-header").forEach((header) => {
-        header.addEventListener("click", () => {
-          const accordion = header.parentElement;
-          const content = header.nextElementSibling;
-          const icon = header.querySelector(".accordion-icon");
-
-          accordion.classList.toggle("accordion-active");
-
-          if (accordion.classList.contains("accordion-active")) {
-            content.style.maxHeight = content.scrollHeight + "px";
-            icon.textContent = "-";
-          } else {
-            content.style.maxHeight = "0";
-            icon.textContent = "+";
-          }
-        });
-      });
-
-      // Выбранные фильтры
-      const selectedCategories = document.querySelector(".selected-categories");
-      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      const productCards = document.querySelectorAll(".product-card");
-      const priceApplyBtn = document.querySelector(".price-apply-btn");
-      const resetFiltersBtn = document.querySelector(".reset-filters-btn");
-      const priceMinInput = document.getElementById("price-min");
-      const priceMaxInput = document.getElementById("price-max");
-
-      let selectedFilters = new Set();
-
-      checkboxes.forEach((checkbox) => {
-        checkbox.addEventListener("change", () => {
-          const filterName = checkbox.parentElement.textContent.trim();
-          const filterValue =
-            checkbox.dataset.category || checkbox.dataset.year;
-          const filterType = checkbox.dataset.category ? "category" : "year";
-
-          if (checkbox.checked) {
-            selectedFilters.add(
-              JSON.stringify({
-                value: filterValue,
-                name: filterName,
-                type: filterType,
-              })
-            );
-          } else {
-            selectedFilters.delete(
-              JSON.stringify({
-                value: filterValue,
-                name: filterName,
-                type: filterType,
-              })
-            );
-          }
-
-          updateSelectedFilters();
-          filterProducts();
-        });
-      });
-
-      // Фильтр по цене
-      priceApplyBtn.addEventListener("click", () => {
-        filterProducts();
-      });
-
-      function updateSelectedFilters() {
-        selectedCategories.innerHTML = "";
-        selectedFilters.forEach((filterStr) => {
-          const filter = JSON.parse(filterStr);
-          const filterTag = document.createElement("div");
-          filterTag.className = "filter-tag";
-          filterTag.innerHTML = `
-            ${filter.name}
-            <span class="remove-filter" data-value='${filter.value}' data-type='${filter.type}'>×</span>
-          `;
-          selectedCategories.appendChild(filterTag);
-        });
-
-        // Обработчики удаления фильтров
-        document.querySelectorAll(".remove-filter").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            const value = e.target.dataset.value;
-            const type = e.target.dataset.type;
-
-            // Находим и снимаем соответствующий чекбокс
-            const selector =
-              type === "year"
-                ? `[data-year="${value}"]`
-                : `[data-category="${value}"]`;
-            const checkbox = document.querySelector(`input${selector}`);
-            if (checkbox) {
-              checkbox.checked = false;
-              checkbox.dispatchEvent(new Event("change"));
-            }
-          });
-        });
-      }
-
-      function filterProducts() {
-        const minPrice = priceMinInput.value
-          ? parseInt(priceMinInput.value)
-          : 0;
-        const maxPrice = priceMaxInput.value
-          ? parseInt(priceMaxInput.value)
-          : Infinity;
-
-        productCards.forEach((card) => {
-          const cardPrice = parseInt(card.dataset.price);
-          const cardCategories = card.dataset.category.split(" ");
-          const cardYear = card.dataset.year;
-
-          let matchesFilters = true;
-
-          // Проверяем выбранные чекбоксы
-          selectedFilters.forEach((filterStr) => {
-            const filter = JSON.parse(filterStr);
-            if (filter.type === "category") {
-              if (!cardCategories.includes(filter.value)) {
-                matchesFilters = false;
-              }
-            } else if (filter.type === "year") {
-              if (cardYear !== filter.value) {
-                matchesFilters = false;
-              }
-            }
-          });
-
-          // Проверяем цену
-          if (cardPrice < minPrice || cardPrice > maxPrice) {
-            matchesFilters = false;
-          }
-
-          card.style.display = matchesFilters ? "block" : "none";
-        });
-      }
-
-      // Функция сброса фильтров
-      function resetFilters() {
-        // Сбрасываем чекбоксы
-        checkboxes.forEach((checkbox) => {
-          checkbox.checked = false;
-        });
-
-        // Очищаем выбранные фильтры
-        selectedFilters.clear();
-
-        // Сбрасываем поля цены
-        priceMinInput.value = "";
-        priceMaxInput.value = "";
-
-        // Обновляем отображение
-        updateSelectedFilters();
-
-        // Показываем все товары
-        productCards.forEach((card) => {
-          card.style.display = "block";
-        });
-      }
-
-      // Обработчик кнопки сброса
-      resetFiltersBtn.addEventListener("click", resetFilters);
-
-      // Поиск товаров
-      const searchInput = document.querySelector(".search-input");
-      const searchBtn = document.querySelector(".search-btn");
-
-      searchBtn.addEventListener("click", performSearch);
-      searchInput.addEventListener("keypress", (e) => {
-        if (e.key === "Enter") {
-          performSearch();
-        }
-      });
-
-      function performSearch() {
-        const searchTerm = searchInput.value.toLowerCase().trim();
-
-        productCards.forEach((card) => {
-          const title = card
-            .querySelector(".product-title")
-            .textContent.toLowerCase();
-          const isVisible = title.includes(searchTerm);
-
-          if (isVisible) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
-        });
-      }
-
-      // Сортировка товаров
-      const sortSelect = document.getElementById("sort-by");
-      sortSelect.addEventListener("change", sortProducts);
-
-      function sortProducts() {
-        const sortValue = sortSelect.value;
-        const productsGrid = document.querySelector(".products-grid");
-        const products = Array.from(productCards).filter(
-          (card) => card.style.display !== "none"
-        );
-
-        products.sort((a, b) => {
-          switch (sortValue) {
-            case "price-asc":
-              return parseInt(a.dataset.price) - parseInt(b.dataset.price);
-            case "price-desc":
-              return parseInt(b.dataset.price) - parseInt(a.dataset.price);
-            case "rating":
-              return parseInt(b.dataset.rating) - parseInt(a.dataset.rating);
-            case "newest":
-              return parseInt(b.dataset.year) - parseInt(a.dataset.year);
-            case "popular":
-              return Math.random() - 0.5;
-            default:
-              return 0;
-          }
-        });
-
-        // Переставляем товары
-        products.forEach((product) => {
-          productsGrid.appendChild(product);
-        });
-      }
-
-      // Добавление в корзину
-      const addToCartButtons = document.querySelectorAll(".add-to-cart");
-      addToCartButtons.forEach((button) => {
-        button.addEventListener("click", (e) => {
-          e.stopPropagation();
-          const productCard = button.closest(".product-card");
-          const productName =
-            productCard.querySelector(".product-title").textContent;
-
-          button.textContent = "Добавлено ✓";
-          button.style.background = "#28a745";
-
-          setTimeout(() => {
-            button.textContent = "В корзину";
-            button.style.background = "";
-          }, 2000);
-
-          console.log(`Товар "${productName}" добавлен в корзину`);
-        });
-      });
-
-      // Клик по карточке товара
-      productCards.forEach((card) => {
-        card.addEventListener("click", () => {
-          const productName = card.querySelector(".product-title").textContent;
-          console.log(`Переход на страницу товара: ${productName}`);
-        });
-      });
-    </script>
+    <script src="/assets/js/catalog.js" ></script>
+    <script src="/assets/js/main.js"></script>        
   </body>
 </html>
