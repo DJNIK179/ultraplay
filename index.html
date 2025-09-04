@@ -63,7 +63,10 @@
             <h1 class="header__logo">UltraPlay</h1>
           </a>
           <div class="header__icons">
-            <a href="#" class="header__icons-fav header__icons-hover">
+            <a
+              href="/favorites.html"
+              class="header__icons-fav header__icons-hover"
+            >
               <svg
                 width="38"
                 height="34"
@@ -304,7 +307,7 @@
                   alt=""
                   class="sales__img"
                 />
-                <a href="#" class="sales__fav">
+                <a href="/favorites.html" class="sales__fav">
                   <svg
                     width="24"
                     height="22"
@@ -335,7 +338,7 @@
                   alt=""
                   class="sales__img"
                 />
-                <a href="#" class="sales__fav">
+                <a href="/favorites.html" class="sales__fav">
                   <svg
                     width="24"
                     height="22"
@@ -366,7 +369,7 @@
                   alt=""
                   class="sales__img"
                 />
-                <a href="#" class="sales__fav">
+                <a href="/favorites.html" class="sales__fav">
                   <svg
                     width="24"
                     height="22"
@@ -400,7 +403,7 @@
                   alt=""
                   class="sales__img"
                 />
-                <a href="#" class="sales__fav">
+                <a href="/favorites.html" class="sales__fav">
                   <svg
                     width="24"
                     height="22"
@@ -431,7 +434,7 @@
                   alt=""
                   class="sales__img"
                 />
-                <a href="#" class="sales__fav">
+                <a href="/favorites.html" class="sales__fav">
                   <svg
                     width="24"
                     height="22"
@@ -462,7 +465,7 @@
                   alt=""
                   class="sales__img"
                 />
-                <a href="#" class="sales__fav">
+                <a href="/favorites.html" class="sales__fav">
                   <svg
                     width="24"
                     height="22"
@@ -493,7 +496,7 @@
                   alt=""
                   class="sales__img"
                 />
-                <a href="#" class="sales__fav">
+                <a href="/favorites.html" class="sales__fav">
                   <svg
                     width="24"
                     height="22"
@@ -636,7 +639,9 @@
                 <a href="#" class="footer__top-right-link">Главная</a>
               </li>
               <li class="footer__top-right-item">
-                <a href="/catalog.html" class="footer__top-right-link">Каталог</a>
+                <a href="/catalog.html" class="footer__top-right-link"
+                  >Каталог</a
+                >
               </li>
               <li class="footer__top-right-item">
                 <a href="#" class="footer__top-right-link">Доставка</a>
@@ -691,5 +696,17 @@
     </footer>
 
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/catalog.js"></script>
+    <script src="/assets/js/favorite/favorite-manager.js"></script>
+    <script src="/assets/js/favorite/favorites-counter.js"></script>
+
+    <!-- Для страниц с товарами -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (document.querySelector(".header__icons-fav")) {
+          window.favoritesCounter = new FavoritesCounter();
+        }
+      });
+    </script>
   </body>
 </html>

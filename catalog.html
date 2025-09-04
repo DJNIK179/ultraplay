@@ -771,7 +771,18 @@
       </div>
     </footer>
 
-    <script src="/assets/js/catalog.js" ></script>
-    <script src="/assets/js/main.js"></script>        
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/catalog.js"></script>
+    <script src="/assets/js/favorite/favorite-manager.js"></script>
+    <script src="/assets/js/favorite/favorites-counter.js"></script>
+
+    <!-- Для страниц с товарами -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (document.querySelector(".header__icons-fav")) {
+          window.favoritesCounter = new FavoritesCounter();
+        }
+      });
+    </script>
   </body>
 </html>

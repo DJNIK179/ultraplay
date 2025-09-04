@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Избранное</title>
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/fonts.css" />
+    <link rel="stylesheet" href="/assets/css/catalog.css" />
+    <link rel="stylesheet" href="/assets/css/favorite.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__burger">
+            <button class="burger-btn" id="burgerBtn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+            <!-- Крестик в меню -->
+            <div class="menu-close" id="menuClose">
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="48"
+                  height="48"
+                  rx="24"
+                  stroke="#F7F7F7"
+                  stroke-width="2"
+                />
+                <path
+                  d="M34.4669 18.0325C34.6336 17.8711 34.7665 17.6781 34.8581 17.4646C34.9496 17.2512 34.9978 17.0216 34.9999 16.7892C35.002 16.5569 34.958 16.3264 34.8704 16.1114C34.7828 15.8963 34.6534 15.7008 34.4897 15.5364C34.326 15.3721 34.1312 15.242 33.9169 15.154C33.7026 15.0659 33.4729 15.0215 33.2413 15.0234C33.0096 15.0253 32.7807 15.0735 32.5679 15.1651C32.355 15.2567 32.1624 15.3899 32.0014 15.5569L25.0099 22.5681L18.0206 15.5569C17.8609 15.385 17.6683 15.2471 17.4544 15.1515C17.2404 15.0558 17.0094 15.0044 16.7752 15.0003C16.541 14.9961 16.3083 15.0393 16.0911 15.1274C15.8739 15.2154 15.6766 15.3464 15.5109 15.5125C15.3453 15.6787 15.2147 15.8766 15.127 16.0945C15.0392 16.3124 14.9961 16.5458 15.0003 16.7808C15.0044 17.0157 15.0557 17.2474 15.151 17.4621C15.2464 17.6767 15.3838 17.8699 15.5552 18.0301L22.5398 25.0436L15.5506 32.0548C15.2424 32.3866 15.0747 32.8253 15.0826 33.2787C15.0906 33.732 15.2737 34.1645 15.5933 34.4851C15.9129 34.8057 16.3441 34.9894 16.796 34.9974C17.2479 35.0054 17.6853 34.8371 18.016 34.528L25.0099 27.5168L31.9991 34.5303C32.3298 34.8394 32.7672 35.0077 33.2191 34.9997C33.671 34.9917 34.1022 34.8081 34.4218 34.4875C34.7414 34.1669 34.9245 33.7343 34.9325 33.281C34.9404 32.8276 34.7727 32.3889 34.4645 32.0572L27.48 25.0436L34.4669 18.0325Z"
+                  fill="#F7F7F7"
+                />
+              </svg>
+            </div>
+
+            <!-- Затемнение фона -->
+            <div class="menu-overlay" id="menuOverlay"></div>
+
+            <!-- Меню -->
+            <nav class="menu" id="menu">
+              <div class="menu-close" id="menuClose"></div>
+              <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/catalog.html">Каталог</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <a href="/" class="logo">
+            <h1 class="header__logo">UltraPlay</h1>
+          </a>
+          <div class="header__icons">
+            <a href="#" class="header__icons-fav header__icons-hover">
+              <svg
+                width="38"
+                height="34"
+                viewBox="0 0 38 34"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="heart-gradient"
+                    x1="0%"
+                    y1="100%"
+                    x2="100%"
+                    y2="0%"
+                  >
+                    <stop offset="0%" stop-color="#9d00ff" />
+                    <stop
+                      offset="100%"
+                      stop-color="#003791"
+                      stop-opacity="0.9"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M32.2225 5.95342C28.9132 2.44373 24.1946 2.5534 20.9548 5.39845C20.4127 5.87072 19.7207 6.13053 19.0048 6.13053C18.289 6.13053 17.597 5.87072 17.0549 5.39845C13.8172 2.55121 9.0943 2.44592 5.78935 5.95342C3.86327 8.43872 3.19229 10.731 3.26177 12.8346C3.33343 14.9887 4.18681 17.1296 5.61997 19.2442C8.51887 23.5282 13.4893 27.2946 17.6868 30.2844C18.0721 30.5601 18.5326 30.7082 19.0048 30.7082C19.477 30.7082 19.9376 30.5601 20.3229 30.2844C24.4899 27.3099 29.4604 23.5414 32.368 19.2552C33.8033 17.1362 34.6632 14.9909 34.737 12.8368C34.813 10.731 34.1464 8.43653 32.2225 5.95342ZM19.0048 2.75521C23.4889 -1.02649 30.1183 -1.11862 34.6437 3.75109L34.6914 3.80373L34.7349 3.85857C37.1017 6.88568 38.1006 9.9457 37.992 12.9531C37.8878 15.9253 36.7109 18.6695 35.0541 21.1131C31.773 25.9565 26.3248 30.0299 22.2034 32.9715C20.2816 34.3425 17.7302 34.3425 15.8084 32.9737C11.6588 30.0168 6.20627 25.9411 2.93171 21.1021C1.27706 18.6585 0.106644 15.9166 0.00675964 12.9465C-0.0931282 9.94131 0.910084 6.88568 3.27697 3.85857L3.3204 3.80373L3.36817 3.75109C7.89132 -1.11862 14.5251 -1.02649 19.0048 2.75521Z"
+                  fill="#F7F7F7"
+                  class="heart-path"
+                />
+              </svg>
+            </a>
+            <a href="#" class="header__icon-cart header__icons-hover">
+              <svg
+                width="33"
+                height="40"
+                viewBox="0 0 33 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient
+                    id="cart-gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#9d00ff" />
+                    <stop
+                      offset="100%"
+                      stop-color="#003791"
+                      stop-opacity="0.9"
+                    />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M28.875 40C30.0094 40 30.9801 39.6087 31.7873 38.826C32.5944 38.0433 32.9986 37.1013 33 36V12C33 10.9 32.5958 9.95866 31.7873 9.176C30.9788 8.39333 30.008 8.00133 28.875 8H24.75C24.75 5.8 23.9422 3.91667 22.3266 2.35C20.7109 0.783333 18.7688 0 16.5 0C14.2313 0 12.2891 0.783333 10.6734 2.35C9.05782 3.91667 8.25 5.8 8.25 8H4.125C2.99063 8 2.01919 8.392 1.21069 9.176C0.402191 9.96 -0.00136948 10.9013 3.8147e-06 12V36C3.8147e-06 37.1 0.403564 38.042 1.21069 38.826C2.01782 39.61 2.98925 40.0013 4.125 40H28.875ZM29.9063 37H3.09375V11H8.25V16C8.25 16.5667 8.448 17.042 8.844 17.426C9.24 17.81 9.7295 18.0013 10.3125 18C10.8955 17.9987 11.385 17.8067 11.781 17.424C12.177 17.0413 12.375 16.5667 12.375 16V11H20.625V16C20.625 16.5667 20.823 17.042 21.219 17.426C21.615 17.81 22.1045 18.0013 22.6875 18C23.2705 17.9987 23.76 17.8067 24.156 17.424C24.552 17.0413 24.75 16.5667 24.75 16V11H29.9063V37ZM20.625 8H12.375C12.375 6.9 12.7786 5.95867 13.5857 5.176C14.3928 4.39333 15.3643 4.00133 16.5 4C17.6358 3.99867 18.6065 4.39067 19.4123 5.176C20.218 5.96133 20.6223 6.90267 20.625 8Z"
+                  fill="#F7F7F7"
+                  class="cart-path"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="wrapper">
+      <nav class="breadcrumbs">
+        <div class="container">
+          <a href="/">Главная</a>
+          <span class="separator">/</span>
+          <span>Избранное</span>
+        </div>
+      </nav>
+
+      <section class="favorite">
+        <div class="container">
+          <h1 class="favorite__title">Избранное</h1>
+
+          <!-- Контейнер для контента -->
+          <div id="favorites-content">
+            <!-- Содержимое будет меняться динамически -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__top-left">
+            <a href="/" class="logo">
+              <h2 class="footer__top-left-logo">UltraPlay</h2>
+            </a>
+            <a
+              href="tel:+79000000000"
+              class="footer__top-left-phone footer__top-left-contact"
+              >+7 (900) 000-00-00</a
+            >
+            <a
+              href="mailto:почта@mail.ru"
+              class="footer__top-left-mail footer__top-left-contact"
+              >почта@mail.ru</a
+            >
+          </div>
+          <div class="footer__top-right">
+            <ul class="footer__top-right-list">
+              <li class="footer__top-right-item">
+                <a href="#" class="footer__top-right-link">Игровые приставки</a>
+              </li>
+              <li class="footer__top-right-item">
+                <a href="#" class="footer__top-right-link"
+                  >Игры для приставок</a
+                >
+              </li>
+              <li class="footer__top-right-item">
+                <a href="#" class="footer__top-right-link"
+                  >Бытовая электроника</a
+                >
+              </li>
+              <li class="footer__top-right-item">
+                <a href="#" class="footer__top-right-link">VR- очки</a>
+              </li>
+            </ul>
+            <ul class="footer__top-right-list">
+              <li class="footer__top-right-item">
+                <a href="#" class="footer__top-right-link">Главная</a>
+              </li>
+              <li class="footer__top-right-item">
+                <a href="/catalog.html" class="footer__top-right-link"
+                  >Каталог</a
+                >
+              </li>
+              <li class="footer__top-right-item">
+                <a href="#" class="footer__top-right-link">Доставка</a>
+              </li>
+              <li class="footer__top-right-item">
+                <a href="#" class="footer__top-right-link">Акции</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">© 2025 UltraPlay</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Договор оферты</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link"
+                  >Политика конфиденциальности</a
+                >
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Возврат</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#" class="footer__nav-link">Контакты</a>
+              </li>
+            </ul>
+            <div class="footer__nav-item-btn">
+              <a href="#" class="footer__nav-link">Подняться наверх</a>
+              <svg
+                width="10"
+                height="17"
+                viewBox="0 0 10 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4.4 16C4.4 16.3314 4.66863 16.6 5 16.6C5.33137 16.6 5.6 16.3314 5.6 16L5 16L4.4 16ZM5.42426 0.575735C5.18995 0.34142 4.81005 0.34142 4.57574 0.575735L0.75736 4.39411C0.523045 4.62843 0.523045 5.00833 0.75736 5.24264C0.991674 5.47695 1.37157 5.47695 1.60589 5.24264L5 1.84853L8.39411 5.24264C8.62843 5.47695 9.00833 5.47695 9.24264 5.24264C9.47696 5.00833 9.47696 4.62843 9.24264 4.39411L5.42426 0.575735ZM5 16L5.6 16L5.6 0.999999L5 0.999999L4.4 0.999999L4.4 16L5 16Z"
+                  fill="#F7F7F7"
+                />
+              </svg>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/catalog.js"></script>
+    <script src="/assets/js/favorite/favorite-manager.js"></script>
+    <script src="/assets/js/favorite/favorites-counter.js"></script>
+
+    <!-- Для страниц с товарами -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (document.querySelector(".sales__item")) {
+          window.favoritesManager = new FavoritesManager();
+        }
+        if (document.querySelector(".header__icons-fav")) {
+          window.favoritesCounter = new FavoritesCounter();
+        }
+      });
+    </script>
+
+    <!-- Для страницы избранного -->
+    <script src="/assets/js/favorite.js"></script>
+  </body>
+</html>

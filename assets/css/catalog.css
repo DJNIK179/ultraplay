@@ -142,7 +142,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .price-inputs {
   display: flex;
-  flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -151,7 +150,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 14px;
   border-radius: 15px;
   padding: 16px 17px;
-  width: 265px;
+  width: 117px;
   height: 62px;
   background: rgba(246, 246, 246, 0.05);
   font-weight: 400;
@@ -467,7 +466,7 @@ input[type="number"]::-webkit-inner-spin-button {
   gap: 30px;
 }
 
-.product__inner-pagination-item {
+.product__inner-pagination-item { 
   width: 81px;
   height: 81px;
   border-radius: 20px;

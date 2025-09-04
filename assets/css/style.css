@@ -25,16 +25,22 @@ body {
   background: var(--general-bg);
 }
 
-.wrapper {
-  min-height: 100%;
-  width: 100%;
-  overflow: hidden;
+html, body {
+  height: 100%;
+}
+
+body {
   display: flex;
   flex-direction: column;
 }
 
-.main {
-  flex-grow: 1;
+.wrapper {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.footer {
+  flex-shrink: 0;
 }
 
 .container {
@@ -516,6 +522,7 @@ body {
   font-size: 32px;
   margin-top: 10px;
   margin-bottom: 20px;
+  color: var(--general-text);
 }
 
 .sales__price {

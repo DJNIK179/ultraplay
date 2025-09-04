@@ -1,0 +1,54 @@
+.favorite {
+  padding-bottom: 150px;
+}
+
+.favorite__title {
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+
+.favorites-grid {
+  display: flex;
+  gap: 42px;
+  flex-wrap: wrap;
+}
+
+.favorite-item__remove-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background: var(--accent-bg);
+  border-radius: 13px;
+  width: 50px;
+  height: 50px;
+}
+
+.favorite-item__remove-btn:hover svg path {
+  fill: #9d00ff;
+}
+
+/* ============================= EMPTY ============================= */
+
+.empty-fav-text {
+  font-family: "Jost-Light";
+  font-weight: 300;
+  font-size: 24px;
+  color: var(--general-text);
+  line-height: 150%;
+
+  max-width: 700px;
+}
+
+.empty-fav-btn {
+  background: linear-gradient(45deg, #003791 0%, #1a0938 100%);
+  width: 699px;
+  height: 86px;
+  border-radius: 20px;
+
+  font-family: "Jost-Medium";
+  font-size: 32px;
+  color: var(--general-text);
+
+  margin-top: 50px;
+}
