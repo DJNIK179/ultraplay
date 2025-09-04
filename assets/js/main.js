@@ -360,7 +360,6 @@ items.forEach(item => {
     });
 }); 
 
-
 class FavoritesManager {
     constructor() {
         this.storageKey = 'userFavorites';

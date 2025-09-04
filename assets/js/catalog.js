@@ -9,10 +9,10 @@ document.querySelectorAll(".accordion-header").forEach((header) => {
 
     if (accordion.classList.contains("accordion-active")) {
       content.style.maxHeight = content.scrollHeight + "px";
-      icon.textContent = "-";
+      icon.classList.toggle("active")
     } else {
       content.style.maxHeight = "0";
-      icon.textContent = "+";
+      icon.classList.remove("active")
     }
   });
 });
