@@ -25,7 +25,8 @@ body {
   background: var(--general-bg);
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -855,4 +856,129 @@ body {
 
 .footer__nav-item-btn:hover svg {
   transform: scale(1.4);
+}
+
+/* ========================== 404 ========================== */
+
+.error {
+  padding: 50px 0 352px;
+}
+
+.error__inner {
+  display: flex;
+  justify-content: center;
+}
+
+.error__top {
+  position: relative;
+  border-radius: 50px;
+  width: 1265px;
+  height: 575px;
+  background-image: url(/assets/image/error-img.jpg);
+}
+
+.error__top::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 50px;
+  width: 1265px;
+  height: 575px;
+  background: #141414;
+  opacity: 0.5;
+}
+
+.error__bottom {
+  position: absolute;
+  left: 50%;
+  bottom: calc(0px - 30%);
+  transform: translateX(-50%);
+  border-radius: 30px;
+  width: 1002px;
+  height: 386px;
+  background: var(--accent-bg);
+}
+
+.error__bottom-inner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+  padding: 60px 50px;
+}
+
+.error__bottom-title {
+  font-family: "Jost-Medium";
+  font-size: 40px;
+  color: var(--general-text);
+}
+
+.error__bottom-text {
+  font-family: 'Jost-Light';
+  font-size: 24px;
+  color: var(--general-text);
+}
+
+.error__btn {
+  width: 100%;
+}
+
+/* Стили для уведомлений о добавлении в корзину */
+.cart-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #9d00ff 0%, #003791 100%);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  z-index: 10000;
+  font-family: 'Jost-Regular';
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Стили для счетчика корзины в хедере */
+.header__icon-cart {
+  position: relative;
+}
+
+.header__cart-counter {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: linear-gradient(45deg, #9d00ff 0%, #003791 100%);
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: 'Jost-SemiBold';
 }

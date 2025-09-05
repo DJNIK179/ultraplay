@@ -1,0 +1,246 @@
+.cart__title {
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+
+.empty-cart-text {
+  font-family: "Jost-Light";
+  font-size: 24px;
+  color: var(--general-text);
+  max-width: 739px;
+  line-height: 150%;
+  margin-bottom: 60px;
+}
+
+.empty-cart-btn {
+  width: 100%;
+  max-width: 699px;
+  margin-bottom: 150px;
+}
+
+.cart__inner {
+  display: flex;
+  gap: 100px;
+  padding-bottom: 80px;
+}
+
+.cart__grid-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: "Jost-Regular";
+  font-size: 16px;
+  line-height: 140%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--general-text);
+}
+
+.cart__grid-list {
+  padding: 30px 0;
+}
+
+.cart__grid-item {
+  display: flex;
+  justify-content: space-between;
+  width: 937px;
+}
+
+.cart__grid-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.cart__grid-item-left {
+  display: flex;
+  gap: 20px;
+}
+
+.card__grid-name-title {
+  font-family: "Jost-Regular";
+  font-size: 24px;
+  color: var(--general-text);
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.card__grid-left-checkbox {
+  border: 1px solid var(--general-text);
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  transition: all 0.2s ease;
+  background: var(--accent-bg);
+}
+
+.card__grid-left-checkbox:hover {
+  border-color: #ddd;
+}
+
+.checkbox-input:checked + .card__grid-left-checkbox {
+  background-color: transparent;
+  border-color: #9d00ff;
+}
+
+.checkbox-input:checked + .card__grid-left-checkbox::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 10px;
+  border: solid #9d00ff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.cart__grid-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.cart__grid-right-contols {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart__grid-controls-amount {
+  border-radius: 13px;
+  padding: 4px 0px;
+  width: 102px;
+  height: 50px;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.05);
+  background: var(--accent-bg);
+  color: var(--general-text);
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.cart__grid-fav-btn,
+.cart__grid-remove-btn {
+  border-radius: 13px;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.05);
+  background: var(--accent-bg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart__grid-item-price {
+  font-family: "Jost-SemiBold";
+  font-size: 24px;
+  color: var(--general-text);
+}
+
+.cart__sidebar-order {
+  border-radius: 10px;
+  padding: 30px;
+  width: 495px;
+  height: 308px;
+  background: var(--accent-bg);
+}
+
+.cart__sidebar-order-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart__sidebar-order-inner-sum {
+  margin-bottom: 10px;
+}
+
+.cart__sidebar-order-inner-sum,
+.cart__sidebar-order-inner-discount,
+.cart__sidebar-order-total-inner {
+  font-family: "Jost-Regular";
+  font-size: 20px;
+  color: var(--general-text);
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart__sidebar-order-total {
+  margin-top: 40px;
+}
+
+.cart__sidebar-order-total-inner {
+  font-family: "Jost-SemiBold";
+  font-style: 24px;
+}
+
+.cart__sidebar-order-total-btn {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.cart__grid-clear {
+  font-family: 'Jost-Regular';
+  font-size: 16px;
+  line-height: 140%;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--general-text);
+  cursor: pointer;
+}
+
+/* Стили для уведомлений */
+.cart-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #9d00ff 0%, #003791 100%);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  z-index: 10000;
+  font-family: 'Jost-Regular';
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

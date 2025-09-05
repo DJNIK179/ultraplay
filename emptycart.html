@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Избранное</title>
     <link rel="stylesheet" href="/assets/css/reset.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/fonts.css" />
     <link rel="stylesheet" href="/assets/css/catalog.css" />
-    <link rel="stylesheet" href="/assets/css/favorite.css" />
+    <link rel="stylesheet" href="/assets/css/cart.css" />
+    <title>Каталог товаров</title>
   </head>
   <body>
     <header class="header">
@@ -65,7 +65,10 @@
             <h1 class="header__logo">UltraPlay</h1>
           </a>
           <div class="header__icons">
-            <a href="/favorites.html" class="header__icons-fav header__icons-hover">
+            <a
+              href="/favorites.html"
+              class="header__icons-fav header__icons-hover"
+            >
               <svg
                 width="38"
                 height="34"
@@ -96,7 +99,7 @@
                 />
               </svg>
             </a>
-            <a href="/cart.html" class="header__icon-cart header__icons-hover">
+            <a href="#" class="header__icon-cart header__icons-hover">
               <svg
                 width="33"
                 height="40"
@@ -132,71 +135,29 @@
       </div>
     </header>
 
+    <nav class="breadcrumbs">
+      <div class="container">
+        <a href="/">Главная</a>
+        <span class="separator">/</span>
+        <span>Корзина</span>
+      </div>
+    </nav>
+
     <div class="wrapper">
-      <nav class="breadcrumbs">
+      <section class="cart">
         <div class="container">
-          <a href="/">Главная</a>
-          <span class="separator">/</span>
-          <span>Избранное</span>
-        </div>
-      </nav>
-
-      <section class="favorite">
-        <div class="container">
-          <h1 class="favorite__title">Избранное</h1>
-          <div class="favorite__remove">Удалить всё</div>
-
-          <!-- Контейнер для контента -->
-          <div id="favorites-content">
-            <!-- Содержимое будет меняться динамически -->
+            <h1 class="cart__title">Корзина</h1>
+          <div class="empty-state">
+            <p class="empty-cart-text">
+              Ачивка “Покупатель” еще не разблокирована. Для ее разблокировки
+              нужно добавь первый товар в корзину!
+            </p>
+            <button class="empty-cart-btn sales__btn" onclick="goToCatalog()">
+              Перейти в каталог
+            </button>
           </div>
         </div>
       </section>
-
-      <div class="favorite__bottom">
-        <div class="container">
-          <div class="favorite__bottom-inner">
-            <div class="favorite__inner-count">В избранном 25 товаров</div>
-            <div class="favorite__inner-pagination">
-              <div class="favorite__inner-pagination-prev">
-                <svg
-                  width="13"
-                  height="23"
-                  viewBox="0 0 13 23"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.43934 12.5607C-0.146447 11.9749 -0.146447 11.0251 0.43934 10.4393L9.98528 0.893398C10.5711 0.307612 11.5208 0.307612 12.1066 0.893398C12.6924 1.47918 12.6924 2.42893 12.1066 3.01472L3.62132 11.5L12.1066 19.9853C12.6924 20.5711 12.6924 21.5208 12.1066 22.1066C11.5208 22.6924 10.5711 22.6924 9.98528 22.1066L0.43934 12.5607ZM2.5 11.5V13H1.5V11.5V10H2.5V11.5Z"
-                    fill="#F7F7F7"
-                    fill-opacity="0.05"
-                  />
-                </svg>
-              </div>
-              <ul class="favorite__inner-pagination-list">
-                <li class="favorite__inner-pagination-item active">1</li>
-                <li class="favorite__inner-pagination-item">2</li>
-                <li class="favorite__inner-pagination-item">3</li>
-                <li class="favorite__inner-pagination-item">...</li>
-              </ul>
-              <div class="favorite__inner-pagination-next">
-                <svg
-                  width="13"
-                  height="23"
-                  viewBox="0 0 13 23"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12.5607 12.5607C13.1464 11.9749 13.1464 11.0251 12.5607 10.4393L3.01472 0.893398C2.42893 0.307612 1.47918 0.307612 0.893398 0.893398C0.307612 1.47918 0.307612 2.42893 0.893398 3.01472L9.37868 11.5L0.893398 19.9853C0.307612 20.5711 0.307612 21.5208 0.893398 22.1066C1.47918 22.6924 2.42893 22.6924 3.01472 22.1066L12.5607 12.5607ZM10.5 11.5V13H11.5V11.5V10H10.5V11.5Z"
-                    fill="#F7F7F7"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <footer class="footer">
@@ -298,25 +259,5 @@
     </footer>
 
     <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/catalog.js"></script>
-    <script src="/assets/js/favorite/favorite-manager.js"></script>
-    <script src="/assets/js/favorite/favorites-counter.js"></script>
-
-    <!-- Для страниц с товарами -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        if (document.querySelector(".sales__item")) {
-          window.favoritesManager = new FavoritesManager();
-        }
-        if (document.querySelector(".header__icons-fav")) {
-          window.favoritesCounter = new FavoritesCounter();
-        }
-      });
-    </script>
-
-    <!-- Для страницы избранного -->
-    <script src="/assets/js/favorite.js"></script>
-    <script src="/assets/js/cart/cart-service.js"></script>
-    <script src="/assets/js/cart.js"></script>
   </body>
 </html>
