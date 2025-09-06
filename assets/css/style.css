@@ -44,6 +44,10 @@ body {
   flex-shrink: 0;
 }
 
+.footer .container {
+  height: auto;
+}
+
 .container {
   max-width: 1558px;
   margin: 0 auto;
