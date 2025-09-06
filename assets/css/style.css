@@ -916,7 +916,7 @@ body {
 }
 
 .error__bottom-text {
-  font-family: 'Jost-Light';
+  font-family: "Jost-Light";
   font-size: 24px;
   color: var(--general-text);
 }
@@ -935,7 +935,7 @@ body {
   padding: 15px 20px;
   border-radius: 10px;
   z-index: 10000;
-  font-family: 'Jost-Regular';
+  font-family: "Jost-Regular";
   font-size: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   animation: slideIn 0.3s ease, fadeOut 0.3s ease 2.7s;
@@ -980,5 +980,191 @@ body {
   justify-content: center;
   font-size: 12px;
   font-weight: bold;
-  font-family: 'Jost-SemiBold';
+  font-family: "Jost-SemiBold";
+}
+
+/* ========================= CONTACT ========================= */
+
+.contact__title {
+  font-size: 64px;
+}
+
+.contact__inner {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 50px 0 150px;
+}
+
+.contact__image {
+  position: relative;
+}
+
+.contact__communication {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  padding: 30px 40px;
+  width: 269px;
+  height: 198px;
+  background: var(--accent-bg);
+  color: var(--general-text);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact__communication-title {
+  font-size: 32px;
+  font-family: "Jost-Regular";
+}
+
+.contact__communication-tel,
+.contact__communication-mail {
+  font-family: "Jost-Light";
+  font-size: 18px;
+}
+
+.contact__from-title {
+  font-family: "Jost-Medium";
+  font-size: 40px;
+  color: var(--general-text);
+  margin-bottom: 20px;
+}
+
+.contact__form-text {
+  font-family: "Jost-Light";
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: var(--general-text);
+  margin-bottom: 40px;
+}
+
+.contact__form-name,
+.contact__form-mail,
+.contact__form-question {
+  font-family: "Jost-Light";
+  font-size: 24px;
+  color: var(--general-text);
+  margin-top: 20px;
+}
+
+.contact__form-name-input,
+.contact__form-mail-input,
+.contact__form-question-input {
+  border-radius: 20px;
+  padding: 20px 30px;
+  width: 607px;
+  height: 66px;
+  background: rgba(246, 246, 246, 0.1);
+
+  font-family: "Jost-Light";
+  font-size: 18px;
+  color: rgba(246, 246, 246, 0.5);
+  margin-top: 20px;
+}
+
+.contact__from-btn {
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* ====================  MODAL  =========================== */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--general-bg);
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.modal__inner {
+  background: var(--accent-bg);
+  padding: 100px;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  max-width: 1034px;
+  width: 90%;
+}
+
+.modal__inner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__close {
+  padding: 15px;
+  border-radius: 100%;
+  border: 2px solid var(--general-text);
+}
+
+.modal__close:hover {
+  border: 2px solid #9D00FF;
+}
+
+.modal__close svg {
+  transition: transform 0.3s ease;
+}
+
+.modal__close:hover svg {
+  transform: scale(1.1);
+  stroke: #9D00FF;
+}
+
+.modal__title {
+  margin-bottom: 20px;
+  font-size: 40px;
+  line-height: 200%;
+  text-transform: uppercase;
+  color: var(--general-text);
+}
+
+.modal__mail {
+  margin-bottom: 20px;
+  font-family: "Jost-Light";
+  font-size: 24px;
+  color: var(--general-text);
+}
+
+.modal__mail-input {
+  border-radius: 20px;
+  padding: 20px 30px;
+  width: 100%;
+  margin-top: 20px;
+  background: rgba(246, 246, 246, 0.1);
+
+  font-family: "Jost-Light";
+  font-size: 18px;
+  color: rgba(246, 246, 246, 0.5);
+}
+
+.modal__btn {
+  width: 100%;
+  padding: 12px;
 }

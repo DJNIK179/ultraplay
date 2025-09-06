@@ -556,3 +556,31 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+
+// MODAL
+
+const modal = document.querySelector(".modal");
+const exclusive = document.querySelector(".exclusive__btn");
+const modalRemove = document.querySelector(".modal__close");
+const modalOverlay = document.querySelector(".modal__overlay"); // Добавлен оверлей
+
+exclusive.addEventListener('click', () => {
+    modal.classList.toggle("active");
+});
+
+// Закрытие по крестику
+modalRemove.addEventListener('click', () => {
+    modal.classList.remove("active");
+});
+
+// Закрытие по клику на оверлей
+modalOverlay.addEventListener('click', () => {
+    modal.classList.remove("active");
+});
+
+// Закрытие по клавише Escape (опционально)
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains("active")) {
+        modal.classList.remove("active");
+    }
+});
