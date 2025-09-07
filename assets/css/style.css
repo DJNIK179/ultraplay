@@ -1129,7 +1129,7 @@ body {
 }
 
 .modal__close:hover {
-  border: 2px solid #9D00FF;
+  border: 2px solid #9d00ff;
 }
 
 .modal__close svg {
@@ -1138,7 +1138,7 @@ body {
 
 .modal__close:hover svg {
   transform: scale(1.1);
-  stroke: #9D00FF;
+  stroke: #9d00ff;
 }
 
 .modal__title {
@@ -1171,4 +1171,37 @@ body {
 .modal__btn {
   width: 100%;
   padding: 12px;
+}
+
+/* ====================== THANKYOU ====================== */
+
+.thank {
+  padding: 50px 0 150px;
+}
+
+.thank__title {
+  font-size: 64px;
+}
+
+.thank__subtitle {
+  font-family: "Jost-Regular";
+  font-size: 24px;
+  color: var(--general-text);
+  margin-bottom: 20px;
+}
+
+.thank__text {
+  font-family: 'Jost-Light';
+  font-size: 24px;
+  color: var(--general-text);
+  max-width: 1000px;
+  line-height: 130%;
+}
+
+.thank__state {
+  margin-top: 50px;
+}
+
+.thank__btn {
+  margin-top: 40px;
 }
