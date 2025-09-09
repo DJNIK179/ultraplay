@@ -250,6 +250,10 @@ body {
   gap: 10px;
 }
 
+.navigation--mobile {
+  display: none;
+}
+
 .dot {
   width: 12px;
   height: 12px;
@@ -418,6 +422,12 @@ body {
 .sales__title {
   font-weight: 700;
   font-size: 64px;
+}
+
+.sales__progress--mobile {
+  display: none; /* По умолчанию скрываем мобильную версию */
+  width: 100%;
+  margin-top: 30px;
 }
 
 .sales__progress {
@@ -696,6 +706,10 @@ body {
   bottom: 0;
 }
 
+.stock__right-image--mobile {
+  display: none;
+}
+
 /* ====================  EXCLUIVE  =========================== */
 
 .exclusive__wrapper {
@@ -766,6 +780,10 @@ body {
 .exclusive__btn:hover {
   box-shadow: 0 0 50px 0 rgba(0, 55, 145, 0.4);
   background: linear-gradient(45deg, #9d00ff 0%, #003791 100%);
+}
+
+.exclusive__icons--mobile {
+  display: none;
 }
 
 /* ====================  FOOTER  =========================== */

@@ -94,6 +94,16 @@
   margin-bottom: 30px;
 }
 
+.checkout__bottom-return-btn {
+  background: transparent;
+  border: 3px solid #f6f6f6;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .checkout__bottom-order-btn,
 .checkout__bottom-return-btn {
   width: 100%;
