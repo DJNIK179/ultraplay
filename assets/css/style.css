@@ -273,16 +273,17 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #f0f0f0;
+  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.8);
   border: none;
   color: white;
   font-size: 24px;
   padding: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -445,6 +446,18 @@ body {
   width: 0%;
 }
 
+.nav__next,
+.nav__prev {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  border: 2px solid rgba(246, 246, 246, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .sales__wrapper {
   position: relative;
   display: flex;
@@ -577,7 +590,7 @@ body {
 
 .sales__nav {
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 
 .nav__prev {
@@ -841,6 +854,10 @@ body {
   font-size: 16px;
   line-height: 140%;
   color: var(--general-text);
+}
+
+.footer__nav-link:hover {
+  border-bottom: 1px solid var(--general-text);
 }
 
 .footer__nav-item-btn {
@@ -1191,7 +1208,7 @@ body {
 }
 
 .thank__text {
-  font-family: 'Jost-Light';
+  font-family: "Jost-Light";
   font-size: 24px;
   color: var(--general-text);
   max-width: 1000px;

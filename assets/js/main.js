@@ -1,4 +1,4 @@
-        document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function() {
             const burgerBtn = document.getElementById('burgerBtn');
             const menuClose = document.getElementById('menuClose');
             const menu = document.getElementById('menu');

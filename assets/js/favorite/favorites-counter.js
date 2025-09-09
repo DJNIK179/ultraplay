@@ -19,19 +19,18 @@ class FavoritesCounter {
         this.counterElement.className = 'favorites-counter';
         this.counterElement.style.cssText = `
             position: absolute;
-            top: -5px;
-            right: -5px;
+            bottom: -5px;
+            right: -10px;
             background: linear-gradient(135deg, #9d00ff, #003791);
             color: white;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 12px;
+            font-size: 18px;
             font-weight: bold;
-            border: 2px solid #1a1a1a;
             box-shadow: 0 2px 4px rgba(0,0,0,0.3);
         `;
 

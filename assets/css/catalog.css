@@ -124,10 +124,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: none;
 }
 
-/* Фильтр по цене */
 .price-filter {
-  margin: 20px 0;
-  padding: 15px;
   border-radius: 20px;
   padding: 20px 40px 30px 40px;
   background: var(--accent-bg);

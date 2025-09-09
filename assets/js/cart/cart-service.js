@@ -85,17 +85,17 @@ class CartService {
             counter.className = 'header__cart-counter';
             counter.style.cssText = `
                 position: absolute;
-                top: -8px;
+                top: 21px;
                 right: -8px;
                 background: linear-gradient(45deg, #9d00ff 0%, #003791 100%);
                 color: white;
                 border-radius: 50%;
-                width: 20px;
-                height: 20px;
+                width: 24px;
+                height: 24px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 12px;
+                font-size: 18px;
                 font-weight: bold;
                 font-family: 'Jost-SemiBold';
             `;
