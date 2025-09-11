@@ -598,50 +598,252 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+// ============== CATEGORY SLIDER =================
 document.addEventListener("DOMContentLoaded", function () {
-  let categorySwiper = null;
+  const categoryWrapper = document.querySelector(".category__inner");
+  const categoryItems = document.querySelectorAll(".category__item");
+  const indicatorsContainer = document.querySelector(".slider-indicators");
+  
+  let currentPosition = 0;
+  let itemWidth = 0;
+  let currentIndex = 0;
+  let isDragging = false;
+  let startX = 0;
+  let currentX = 0;
+  let startPosition = 0;
 
-  function initCategorySwiper() {
-    if (window.innerWidth <= 768) {
-      // Если слайдер еще не инициализирован
-      if (!categorySwiper) {
-        categorySwiper = new Swiper(".category__swiper", {
-          slidesPerView: 1.2,
-          spaceBetween: 20,
-          centeredSlides: false,
-          loop: false,
-          pagination: {
-            el: ".category__pagination",
-            clickable: true,
-          },
-          breakpoints: {
-            320: {
-              slidesPerView: 1.1,
-              spaceBetween: 15,
-            },
-            480: {
-              slidesPerView: 1.3,
-              spaceBetween: 20,
-            },
-            640: {
-              slidesPerView: 1.5,
-              spaceBetween: 25,
-            },
-          },
+  // Функция для создания индикаторов
+  function createIndicators() {
+    if (window.innerWidth <= 768 && indicatorsContainer) {
+      indicatorsContainer.innerHTML = '';
+      categoryItems.forEach((_, index) => {
+        const indicator = document.createElement('div');
+        indicator.className = 'slider-indicator' + (index === currentIndex ? ' active' : '');
+        indicator.addEventListener('click', () => {
+          goToSlide(index);
         });
-      }
-    } else {
-      // Если это десктоп и слайдер инициализирован - уничтожаем его
-      if (categorySwiper) {
-        categorySwiper.destroy(true, true);
-        categorySwiper = null;
+        indicatorsContainer.appendChild(indicator);
+      });
+    } else if (indicatorsContainer) {
+      indicatorsContainer.innerHTML = '';
+    }
+  }
+
+  // Функция для перехода к конкретному слайду
+  function goToSlide(index) {
+    if (categoryItems.length === 0) return;
+    
+    const maxIndex = Math.max(0, categoryItems.length - 1);
+    
+    if (index < 0) index = 0;
+    if (index > maxIndex) index = maxIndex;
+    
+    currentIndex = index;
+    currentPosition = -currentIndex * itemWidth;
+    
+    categoryWrapper.style.transform = `translateX(${currentPosition}px)`;
+    updateIndicators();
+  }
+
+  // Обновление индикаторов
+  function updateIndicators() {
+    if (window.innerWidth <= 768 && indicatorsContainer) {
+      const indicators = document.querySelectorAll('.slider-indicator');
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentIndex);
+      });
+    }
+  }
+
+  // Получаем ширину одного элемента с отступом
+  function updateItemWidth() {
+    if (categoryItems.length > 0) {
+      if (window.innerWidth <= 768) {
+        // Для мобильных - полная ширина элемента включая padding
+        const style = window.getComputedStyle(categoryItems[0]);
+        itemWidth = categoryItems[0].offsetWidth + 
+                   parseInt(style.paddingLeft) + 
+                   parseInt(style.paddingRight) +
+                   parseInt(style.marginLeft) +
+                   parseInt(style.marginRight);
+      } else {
+        // Для десктопа - обычная логика
+        const gap = 49;
+        itemWidth = categoryItems[0].offsetWidth + gap;
       }
     }
   }
 
-  // Инициализируем при загрузке
-  initCategorySwiper();
+  // Функция перемещения слайдера
+  function moveSlider(direction) {
+    if (categoryItems.length === 0) return;
 
-  // Инициализируем при изменении размера окна
-  window.addEventListener("resize", initCategorySwiper);
+    updateItemWidth();
+    const maxIndex = Math.max(0, categoryItems.length - 1);
+
+    currentIndex += direction;
+
+    if (currentIndex < 0) {
+      currentIndex = 0;
+      return;
+    }
+    if (currentIndex > maxIndex) {
+      currentIndex = maxIndex;
+      return;
+    }
+
+    currentPosition = -currentIndex * itemWidth;
+    categoryWrapper.style.transform = `translateX(${currentPosition}px)`;
+    updateIndicators();
+  }
+
+  // Инициализация
+  function initSlider() {
+    if (window.innerWidth <= 768) {
+      // Для мобильных включаем слайдер
+      categoryWrapper.style.overflow = 'visible'; // Изменено на visible
+      categoryWrapper.style.display = 'flex';
+      categoryWrapper.style.flexWrap = 'nowrap';
+      categoryWrapper.style.transition = 'transform 0.5s ease';
+      
+
+      updateItemWidth();
+      createIndicators();
+      
+      currentPosition = -currentIndex * itemWidth;
+      categoryWrapper.style.transform = `translateX(${currentPosition}px)`;
+    } else {
+      // Для десктопа отключаем слайдер
+      categoryWrapper.style.transform = 'none';
+      categoryWrapper.style.overflow = 'visible';
+      categoryWrapper.style.paddingLeft = '0';
+      categoryWrapper.style.paddingRight = '0';
+    }
+  }
+
+  // Touch events для мобильных
+  if (categoryWrapper) {
+    categoryWrapper.addEventListener("touchstart", (e) => {
+      if (window.innerWidth > 768) return;
+      
+      startX = e.touches[0].clientX;
+      startPosition = currentPosition;
+      isDragging = true;
+      categoryWrapper.style.transition = "none";
+    });
+
+    categoryWrapper.addEventListener("touchmove", (e) => {
+      if (!isDragging || window.innerWidth > 768) return;
+      
+      currentX = e.touches[0].clientX;
+      const diff = currentX - startX;
+      const newPosition = startPosition + diff;
+
+      const maxIndex = Math.max(0, categoryItems.length - 1);
+      const minPosition = 0;
+      const maxPosition = -maxIndex * itemWidth;
+
+      const limitedPosition = Math.min(
+        Math.max(newPosition, maxPosition),
+        minPosition
+      );
+      categoryWrapper.style.transform = `translateX(${limitedPosition}px)`;
+    });
+
+    categoryWrapper.addEventListener("touchend", () => {
+      if (!isDragging || window.innerWidth > 768) return;
+      
+      isDragging = false;
+      categoryWrapper.style.transition = "transform 0.5s ease";
+
+      const diff = startX - currentX;
+      if (Math.abs(diff) > 30) {
+        if (diff > 0) {
+          moveSlider(1);
+        } else {
+          moveSlider(-1);
+        }
+      } else {
+        categoryWrapper.style.transform = `translateX(${currentPosition}px)`;
+      }
+    });
+  }
+
+  // Обработчик изменения размера окна
+  window.addEventListener("resize", function () {
+    initSlider();
+  });
+
+  // Предотвращаем drag изображений
+  categoryItems.forEach(item => {
+    const images = item.querySelectorAll('img');
+    images.forEach(img => {
+      img.addEventListener('dragstart', (e) => e.preventDefault());
+    });
+    
+    // Добавляем стили для видимости следующего слайда
+    if (window.innerWidth <= 768) {
+      item.style.flexShrink = '0';
+      item.style.width = '85%'; // Оставляем место для preview
+    }
+  });
+
+  // Запускаем инициализацию
+  initSlider();
 });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterToggleBtn = document.getElementById('filterToggleBtn');
+            const sidebar = document.getElementById('sidebar');
+            const sidebarOverlay = document.getElementById('sidebarOverlay');
+            const closeSidebar = document.getElementById('closeSidebar');
+
+            // Функция для открытия/закрытия сайдбара
+            function toggleSidebar() {
+                sidebar.classList.toggle('active');
+                sidebarOverlay.classList.toggle('active');
+                document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+            }
+
+            // Обработчики событий
+            filterToggleBtn.addEventListener('click', toggleSidebar);
+            closeSidebar.addEventListener('click', toggleSidebar);
+            sidebarOverlay.addEventListener('click', toggleSidebar);
+
+            // Закрытие по ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebar.classList.contains('active')) {
+                    toggleSidebar();
+                }
+            });
+
+            // Аккордеоны
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordion = this.parentElement;
+                    const content = this.nextElementSibling;
+                    const icon = this.querySelector('.accordion-icon');
+                    
+                    accordion.classList.toggle('accordion-active');
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                        icon.classList.remove('active');
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.classList.add('active');
+                    }
+                });
+            });
+
+            // Инициализация аккордеонов
+            const accordions = document.querySelectorAll('.accordion');
+            accordions.forEach(accordion => {
+                const content = accordion.querySelector('.accordion-content');
+                content.style.maxHeight = null;
+            });
+        });
+
+        

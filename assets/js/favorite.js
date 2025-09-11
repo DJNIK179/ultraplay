@@ -65,7 +65,7 @@ function removeFromFavorites(itemId) {
 function toggleFavoriteRemoveElement(show) {
   const favoriteRemoveElement = document.querySelector('.favorite__remove');
   if (favoriteRemoveElement) {
-      favoriteRemoveElement.style.display = show ? 'block' : 'none';
+      favoriteRemoveElement.style.display = show ? 'flex' : 'none';
       
       // Добавляем обработчик события только если элемент видим
       if (show) {
@@ -142,7 +142,7 @@ function showFavoritesList(favorites) {
               item.id
             )}">
                 <div class="favorite-item__image sales__image">
-                    <img class="sales__img" src="${escapeHTML(
+                    <img class="sales__img fav__img" src="${escapeHTML(
                       item.image
                     )}" alt="${escapeHTML(
       item.imageAlt

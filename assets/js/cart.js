@@ -147,7 +147,7 @@ function renderCartItems(items) {
 
   const sidebar = document.querySelector(".cart__sidebar");
   if (sidebar) {
-    sidebar.style.display = "block";
+    sidebar.style.display = "flex";
   }
 }
 
