@@ -22,6 +22,10 @@
   position: relative;
 }
 
+.cart__grid-controls-amount--mobile {
+  display: none;
+}
+
 .product__left-slider-wrapper {
   width: 81px;
   height: 300px;
@@ -152,3 +156,5 @@
 .product__sales-title {
     font-size: 32px;
 }
+
+

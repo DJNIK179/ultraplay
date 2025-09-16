@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/catalog.css" />
     <link rel="stylesheet" href="/assets/css/cart.css" />
     <link rel="stylesheet" href="/assets/css/product.css" />
+        <link rel="stylesheet" href="/assets/css/media.css" />
     <title>Каталог товаров</title>
   </head>
   <body>
@@ -239,7 +240,7 @@
                 Топ продаж <span class="point">·</span> Экшен
               </p>
               <div class="product__right-cost">
-                <div class="cart__grid-controls-amount">
+                <div class="cart__grid-controls-amount cart__grid-controls-amount--descktop">
                   <div class="cart__grid-amount-minus">-</div>
                   <div class="cart__grid-anount-input">1</div>
                   <div class="cart__grid-amount-plus">+</div>
@@ -265,6 +266,7 @@
                   скидкам и редким играм только по почте!
                 </p>
               </div>
+              
               <div class="product__right-buttons">
                 <button
                   type="button"
@@ -272,6 +274,7 @@
                 >
                   Добавить в корзину
                 </button>
+                <div class="proruct__buttons--mobile">
                 <div class="product__right-fav sales__fav">
                   <svg
                     width="32"
@@ -286,10 +289,16 @@
                     />
                   </svg>
                 </div>
+               <div class="cart__grid-controls-amount cart__grid-controls-amount--mobile">
+                                  <div class="cart__grid-amount-minus">-</div>
+                  <div class="cart__grid-anount-input">1</div>
+                  <div class="cart__grid-amount-plus">+</div>
+</div>
               </div>
             </div>
           </div>
-            <div class="container sales__container">
+          </div>
+          <div class="container sales__container">
           <div class="sales__top">
             <h2 class="sales__title product__sales-title">Смотрите так же</h2>
             <div class="sales__progress">

@@ -646,7 +646,7 @@
     border-radius: 10px;
     padding: 15px 20px 15px 55px;
     width: 300px;
-    height: 50px; 
+    height: 50px;
   }
 
   .search-section {
@@ -667,7 +667,6 @@
   .sorting-container {
     display: none;
   }
-
 
   .products-grid {
     justify-content: center;
@@ -697,6 +696,109 @@
     width: 40px;
     height: 40px;
     border-radius: 10px;
+  }
+
+  .product__inner {
+    flex-direction: column;
+  }
+
+  .product__inner-left {
+    flex-direction: column-reverse;
+  }
+
+  .product__left-img {
+    width: 300px;
+    height: auto;
+  }
+
+  .product__left-slider {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .product__left-slider-list {
+    gap: 20px;
+  }
+
+  .product__left-slider-wrapper {
+    display: flex;
+  }
+
+  .cart__grid-controls-amount--descktop {
+    display: none;
+  }
+
+  .cart__grid-controls-amount--mobile {
+    display: flex;
+
+    border-radius: 13px;
+    padding: 4px 20px;
+    width: 230px;
+    height: 50px;
+  }
+
+  .product__right-title {
+    font-size: 20px;
+  }
+
+  .product__item-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .product__left-nav {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .product__right-descr {
+    font-size: 16px;
+    gap: 15px;
+  }
+
+  .product__price-new {
+    font-size: 24px;
+  }
+
+  .product__price-old {
+    font-size: 14px;
+  }
+
+  .product__left-slider-next svg {
+    rotate: -90deg;
+  }
+
+  .product__left-slider-prev svg {
+    rotate: -90deg;
+  }
+
+  .cart__grid-controls-amount {
+    margin: 0;
+  }
+
+  .proruct__buttons--mobile {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+  }
+
+  .product__right-buttons {
+    flex-direction: column-reverse;
+  }
+
+  .product__right-btn {
+    border-radius: 10px;
+    padding: 15px 50px;
+    width: 300px;
+    height: 56px;
+  }
+
+  .product__right-fav {
+    border-radius: 13px;
+width: 50px;
+height: 50px;
   }
 
 }
@@ -831,3 +933,31 @@
     overflow: hidden; /* Скрываем то, что выходит за пределы контейнера */
   }
 }
+
+/* Только для мобильных устройств - горизонтальный слайдер */
+@media (max-width: 768px) {
+  .product__left-slider-wrapper {
+    overflow-x: hidden;
+    overflow-y: visible;
+    height: 50px; /* Высота одного элемента */
+    width: calc(70px * 2);
+  }
+
+  #sliderList {
+    display: flex;
+    flex-direction: row;
+    transition: transform 0.3s ease;
+    height: 50px;
+    width: max-content;
+  }
+
+  .product__left-slider-item {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0 !important; /* Убираем вертикальные отступы */
+    flex-shrink: 0;
+  }
+}
+
+/* Для десктопных устройств остаются оригинальные стили */
+/* Не меняем вертикальное расположение на ПК */
