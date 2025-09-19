@@ -528,7 +528,7 @@
 
   .cart__grid-item-price {
     font-size: 16px;
-    transform: translate(-93px, -18px);
+    transform: translate(-18px, -18px);
   }
 
   .cart__grid-item:not(:last-child) {
@@ -813,6 +813,103 @@
     border-radius: 13px;
     width: 50px;
     height: 50px;
+  }
+
+  /* Оформление заказа */
+
+  .checkout {
+    padding: 50px 0 100px;
+  }
+
+  .checkout__title {
+    font-size: 23px;
+    margin-bottom: 30px;
+  }
+
+  .checkout__inner {
+    flex-direction: column;
+    padding: 0;
+    gap: 80px;
+  }
+
+  .checkout__data-item,
+  .checkout__adress-item {
+    width: 300px;
+  }
+
+  .checkout__data-input,
+  .checkout__adress-input {
+    font-size: 14px;
+  }
+
+  .checkout__form-adress,
+  .checkout__form-data {
+    margin-bottom: 20px;
+  }
+
+  .checkout__top-inner {
+    font-size: 14px;
+  }
+
+  .checkout__bottom-inner {
+    font-size: 16px;
+  }
+
+  .checkout__bottom-order-btn,
+  .checkout__bottom-return-btn {
+    font-size: 16px;
+  }
+
+  .checkout__sidebar {
+    height: auto;
+  }
+
+  .modal__inner {
+    padding: 35px 30px 50px 35px;
+  }
+
+  .modal__inner-top {
+    margin-bottom: 20px;
+  }
+
+  .modal__title {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .modal__close {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--general-text);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal__close svg {
+    width: 6px;
+    height: 6px;
+  }
+
+  .modal__mail {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .modal__mail-input {
+    border-radius: 10px;
+    padding: 20px;
+    width: 260px;
+    height: 50px;
+    font-size: 12px;
+    margin: 10px 0 20px;
+  }
+
+  .modal__btn {
+    margin: 0;
+    font-size: 16px;
   }
 }
 
